@@ -1,0 +1,91 @@
+/*estilo fundo*/
+body{
+    font-family: arial;
+    background-image: linear-gradient(to right, rgb(209, 0, 0), rgb(39, 7, 7));
+}
+/*estilo div que contém tudo*/
+.box{
+    /*usado para a div ocupar somente o espaço dela mesmo*/
+    position: absolute;
+
+    /*forma de centralizar a div na página*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*---------------------------*/
+
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 15px;
+    width: 20%;
+    color: #fff;
+}
+/*estilo contorno*/
+fieldset{
+    border: 3px solid red;
+}
+/*estilo contorno legendda de cima*/
+legend{
+    border: 1px solid red;
+    text-align: center;
+    background-color: red;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+/*estilo das class com todo o input*/
+.inputBox{
+    position: relative;
+}
+/*estilo das barras digitaveis*/
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    /*comando para aumentar o espaço entre caracteres*/
+    letter-spacing: 2px;
+}
+/*estilo que manipula animação labes*/
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*usado para fazer ações em input*/
+    pointer-events: none;
+    transition: 5px;
+}
+/*estilo para quando clicar nos inputs*/
+/*focus: para quando clicar no input, valid: para quando o input estiver preenchido*/ 
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: red;
+}
+#data-nascimento{
+    border:none;
+    padding: 8px;
+    border-radius: 10px;
+    /*outline none é utilizado para retirar linha que fica ao redor do input ao clicar*/
+    outline: none;
+    font-size: 15px;
+
+}
+#submit{
+    background-image: linear-gradient(to right, rgb(209, 0, 0), rgb(39, 7, 7));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+/*hover é utilizado para ações quando se passa o mouse encima de um input*/
+#submit:hover{
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(39, 7, 7));
+}
